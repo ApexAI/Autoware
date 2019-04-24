@@ -399,3 +399,4 @@ class OpenCVCalibrationNode(CalibrationNode):
                 self.putText(display, "%.3f" % drawable.dim, (2 * width, self.y(3)))
 
         self.queue_display.append(display)
+

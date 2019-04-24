@@ -1,3 +1,4 @@
+<!-- -->
 <launch>
   <arg name="file" default="" />
   <node pkg="points2image" type="calibration_publisher" name="calibration_publisher">

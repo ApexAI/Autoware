@@ -1,0 +1,393 @@
+/camera0:
+  camera_frame: ''
+  camera_id: /camera0
+  camera_info_topic: /camera_info
+  file: /home/autoware/20190220_162752_autoware_lidar_camera_calibration.yaml
+  image_topic_src: /image_raw
+  projection_matrix_topic: /projection_matrix
+  publish_camera_info: true
+  publish_extrinsic_mat: true
+  register_lidar2camera_tf: true
+  solo_camera: false
+  target_frame: velodyne
+PointGrey Grasshoper 3 (USB1):
+  CalibrationFile: ''
+  format: raw
+  fps: 20
+  mode: 0
+  timeout: 1000
+booted_cmds:
+  names: []
+calibration_publisher:
+  camera_frame: camera
+  camera_id: ''
+  camera_info_topic: /camera_info
+  file: ''
+  image_topic_src: /image_raw
+  projection_matrix_topic: /projection_matrix
+  publish_camera_info: true
+  publish_extrinsic_mat: true
+  register_lidar2camera_tf: true
+  target_frame: velodyne
+car_dpm:
+  Lambda: 10
+  group_threshold: 0.1
+  num_bins: 9
+  num_cells: 8
+  score_threshold: -0.5
+car_fusion:
+  car: true
+  dispersion: 1.0
+  max_height: 2.0
+  max_low_height: -1.0
+  min_low_height: -1.5
+  min_points: 2
+  pedestrian: false
+  sync: false
+car_kf:
+  camera_id: ''
+  car: true
+  default_lifespan: 8
+  error_estimate_covariance: 1000000.0
+  initial_lifespan: 4
+  measurement_noise_covariance: 25.0
+  noise_covariance: 1.0
+  orb_features: 2000
+  pedestrian: false
+  percentage_of_overlapping: 0.0
+  sync: false
+  use_orb: 0
+decision_maker:
+  baselink_tf: base_link
+  convergence_count: 5
+  convergence_threshold: 0.01
+  crawl_velocity: 4.0
+  detection_area_rate: 1.0
+  detection_area_x1: 80.0
+  detection_area_x2: 0.0
+  detection_area_y1: 50.0
+  detection_area_y2: -50.0
+  enable_display_marker: false
+  enable_force_state_change: false
+  points_topic: !!python/unicode '/points_lanes'
+  shift_width: 1.0
+  stopline_target_ratio: 0.0
+  stopline_target_waypoint: 10
+  target_waypoint: 14
+detection_qs:
+  file: ''
+lane_rule:
+  acceleration: 1.0
+  number_of_smoothing_count: 0
+  number_of_zeros_ahead: 5
+  number_of_zeros_behind: 0
+  stopline_search_radius: 1.0
+lane_select:
+  distance_threshold_neighbor_lanes: 5.0
+  enablePlannerDynamicSwitch: false
+  lane_change_interval: 10.0
+  lane_change_target_minimum: 10.0
+  lane_change_target_ratio: 5.0
+  vector_length_hermite_curve: 10.0
+lane_stop:
+  traffic_light: 1
+lidar_euclidean_cluster_detect:
+  clip_max_height: 0.5
+  clip_min_height: -1
+  cluster_merge_threshold: 1.5
+  cluster_size_max: 100000
+  cluster_size_min: 3
+  clustering_distance: 0.75
+  clustering_distances: '[0.5,1.1,1.6,2.1,2.6]'
+  clustering_ranges: '[15,30,45,60]'
+  downsample_cloud: false
+  keep_lane_left_distance: 5.0
+  keep_lane_right_distance: 5.0
+  keep_lanes: false
+  leaf_size: 0.1
+  output_frame: velodyne
+  points_node: !!python/unicode '/points_no_ground'
+  pose_estimation: false
+  publish_filtered: false
+  remove_ground: true
+  remove_points_upto: 0.0
+  sync: false
+  use_diffnormals: false
+  use_gpu: false
+  use_multiple_thres: false
+  use_vector_map: false
+  vectormap_frame: map
+  wayarea_gridmap_layer: wayarea
+  wayarea_gridmap_topic: !!python/unicode 'grid_map_wayarea'
+  wayarea_no_road_value: 255
+localization_qs:
+  file: ''
+map_qs:
+  file: ''
+mission_planning_qs:
+  file: ''
+motion_planning_qs:
+  file: ''
+ndt_matching:
+  error_threshold: 1.0
+  get_height: false
+  imu_topic: !!python/unicode '/imu_raw'
+  imu_upside_down: false
+  init_pos_gnss: 0
+  max_iterations: 30
+  method_type: 0
+  pitch: 0.0
+  resolution: 1.0
+  roll: 0.0
+  step_size: 0.1
+  sync: false
+  trans_epsilon: 0.01
+  use_imu: false
+  use_odom: true
+  use_predict_pose: 1
+  x: 5887.9
+  y: 158079.0
+  yaw: 3.0
+  z: -30.6
+ndt_matching_monitor:
+  budget: 20
+  cpu_chks:
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  nice: 0
+  period: 100
+  policy: !!python/unicode 'FIFO'
+  prio: 99
+  real_time: false
+obstacle_avoid:
+  avoid_distance: 13.0
+  avoid_velocity_limit_mps: 4.0
+  avoidance: false
+pcd_binarizer:
+  path_pcd_binarizer: ''
+  point_type: !!python/unicode 'PointXYZ'
+pcd_filter:
+  leaf_size: 0.2
+  path_pcd_filter: ''
+  point_type: !!python/unicode 'PointXYZ'
+pedestrian_dpm:
+  Lambda: 10
+  group_threshold: 0.3
+  num_bins: 9
+  num_cells: 8
+  score_threshold: 0.6
+pedestrian_fusion:
+  dispersion: 1.0
+  max_height: 2.0
+  max_low_height: -1.0
+  min_low_height: -1.5
+  min_points: 2
+pedestrian_kf:
+  default_lifespan: 8
+  error_estimate_covariance: 1000000.0
+  initial_lifespan: 4
+  measurement_noise_covariance: 25.0
+  noise_covariance: 1.0
+  orb_features: 2000
+  percentage_of_overlapping: 0.0
+  use_orb: 0
+play_rosbag_play:
+  file: ''
+  rate: ''
+  repeat: false
+  start: 0
+point_cloud:
+  path_area_list: None
+  path_area_list_cmd_param: null
+  path_pcd: /home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000045_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000045_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000045_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000046_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000046_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000046_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000047_001577.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000047_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000047_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000047_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000047_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000047_001582.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000048_001575.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000048_001576.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000048_001577.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000048_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000048_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000048_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000048_001582.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000048_001583.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000049_001574.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000049_001575.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000049_001576.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000049_001577.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000049_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000049_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000049_001582.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000049_001583.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000050_001573.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000050_001574.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000050_001575.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000050_001576.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000050_001582.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000050_001583.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000050_001584.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000051_001573.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000051_001574.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000051_001575.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000051_001576.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000051_001577.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000051_001583.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000051_001584.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000051_001585.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000052_001572.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000052_001573.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000052_001574.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000052_001575.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000052_001576.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000052_001577.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000052_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000052_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000052_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000052_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000052_001582.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000052_001583.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000052_001584.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000052_001585.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000052_001586.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000053_001572.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000053_001573.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000053_001576.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000053_001577.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000053_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000053_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000053_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000053_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000053_001582.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000053_001583.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000053_001584.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000053_001585.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000053_001586.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000054_001571.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000054_001572.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000054_001573.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000054_001576.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000054_001577.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000054_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000054_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000054_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000054_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000054_001582.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000054_001583.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000054_001584.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000054_001585.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000054_001586.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000055_001570.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000055_001571.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000055_001572.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000055_001573.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000055_001577.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000055_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000055_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000055_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000055_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000055_001582.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000055_001583.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000055_001584.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000055_001585.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000055_001586.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000056_001570.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000056_001571.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000056_001572.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000056_001573.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000056_001574.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000056_001575.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000056_001576.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000056_001577.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000056_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000056_001582.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000056_001583.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000056_001584.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000057_001572.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000057_001573.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000057_001574.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000057_001575.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000057_001576.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000057_001577.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000057_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000057_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000057_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000057_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000057_001582.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000057_001583.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000057_001584.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000057_001585.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000057_001586.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000057_001587.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000058_001574.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000058_001575.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000058_001576.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000058_001577.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000058_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000058_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000058_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000058_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000058_001582.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000058_001583.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000058_001584.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000058_001585.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000058_001586.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000058_001587.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000058_001588.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000059_001574.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000059_001575.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000059_001576.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000059_001577.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000059_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000059_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000059_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000059_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000059_001582.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000059_001583.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000059_001584.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000059_001585.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000059_001586.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000059_001587.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000059_001588.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000060_001574.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000060_001575.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000060_001576.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000060_001577.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000060_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000060_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000060_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000060_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000060_001582.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000060_001583.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000060_001584.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000061_001574.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000061_001575.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000061_001576.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000061_001577.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000061_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000061_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000061_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000061_001582.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000062_001574.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000062_001575.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000062_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000062_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000062_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000062_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000063_001573.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000063_001574.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000063_001575.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000063_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000063_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000063_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000064_001573.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000064_001574.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000064_001575.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000064_001576.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000064_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000064_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000064_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000064_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000064_001582.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000065_001573.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000065_001574.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000065_001575.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000065_001576.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000065_001577.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000065_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000065_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000065_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000065_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000065_001582.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000066_001576.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000066_001577.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000066_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000066_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000066_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000066_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000067_001578.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000067_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000067_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000067_001581.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000068_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000068_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000069_001579.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000069_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_Laser000070_001580.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_garage.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.20_parking_lot.pcd,/home/autoware/apex-data/apex_ros1/map/pointcloud_map/filtered_0.2/0.30_roundabout_intensity.pcd
+  scene_num: noupdate
+points_concat_filter:
+  input_topics: '[/points_alpha,/points_beta]'
+  output_frame_id: velodyne
+  output_topic: /points_concat
+points_image:
+  camera_id: !!python/unicode '/camera0'
+  sync: false
+pure_pursuit:
+  displacement_threshold: 0.0
+  is_linear_interpolation: true
+  lookahead_distance: 4.0
+  lookahead_ratio: 2.0
+  minimum_lookahead_distance: 6.0
+  param_flag: 0
+  publishes_for_steering_robot: false
+  relative_angle_threshold: 0
+  velocity: 5.0
+range_vision_fusion:
+  camera_info_src: !!python/unicode '/camera0/camera_info'
+  detected_objects_range: !!python/unicode '/detection/lidar_objects'
+  detected_objects_vision: !!python/unicode '/detection/vision_objects'
+  sync_topics: false
+ray_ground_filter:
+  clipping_height: 0.9
+  concentric_divider_distance: 0.05
+  general_max_slope: 12
+  input_point_topic: !!python/unicode '/points_raw'
+  local_max_slope: 15
+  min_height_threshold: 0.05
+  min_point_distance: 1.85
+  radial_divider_angle: 0.12
+  reclass_distance_threshold: 0.2
+  sensor_height: 1.86
+ring_ground_filter:
+  max_slope: 10.0
+  point_topic: !!python/unicode '/points_raw'
+  sensor_height: 1.85
+  sensor_model: !!python/unicode '16'
+  vertical_thres: 0.08
+sensing_qs:
+  file: ''
+setup_tf:
+  frame_id: /base_link
+  localizer_cmd_param: /velodyne
+  localizer_rosparam: velodyne
+  period_in_ms: 10
+  pitch: 0.0
+  roll: 0.0
+  x: 0.18
+  y: 0.02
+  yaw: 3.16
+  z: 1.48
+tf:
+  file: /home/autoware/apex-data/apex_ros1/map/tf/tf.launch
+twist_filter:
+  lateral_accel_limit: 3.0
+  lowpass_gain_angular_z: 0.0
+  lowpass_gain_linear_x: 0.0
+vector_map:
+  path_vec: /home/autoware/apex-data/apex_ros1/map/vector_map/vector_map_20180220_20-increased-detection-area/area.csv,/home/autoware/apex-data/apex_ros1/map/vector_map/vector_map_20180220_20-increased-detection-area/crosswalk.csv,/home/autoware/apex-data/apex_ros1/map/vector_map/vector_map_20180220_20-increased-detection-area/dtlane.csv,/home/autoware/apex-data/apex_ros1/map/vector_map/vector_map_20180220_20-increased-detection-area/idx.csv,/home/autoware/apex-data/apex_ros1/map/vector_map/vector_map_20180220_20-increased-detection-area/intersection.csv,/home/autoware/apex-data/apex_ros1/map/vector_map/vector_map_20180220_20-increased-detection-area/lane.csv,/home/autoware/apex-data/apex_ros1/map/vector_map/vector_map_20180220_20-increased-detection-area/line.csv,/home/autoware/apex-data/apex_ros1/map/vector_map/vector_map_20180220_20-increased-detection-area/node.csv,/home/autoware/apex-data/apex_ros1/map/vector_map/vector_map_20180220_20-increased-detection-area/point.csv,/home/autoware/apex-data/apex_ros1/map/vector_map/vector_map_20180220_20-increased-detection-area/pole.csv,/home/autoware/apex-data/apex_ros1/map/vector_map/vector_map_20180220_20-increased-detection-area/poledata.csv,/home/autoware/apex-data/apex_ros1/map/vector_map/vector_map_20180220_20-increased-detection-area/roadedge.csv,/home/autoware/apex-data/apex_ros1/map/vector_map/vector_map_20180220_20-increased-detection-area/roadsign.csv,/home/autoware/apex-data/apex_ros1/map/vector_map/vector_map_20180220_20-increased-detection-area/signaldata.csv,/home/autoware/apex-data/apex_ros1/map/vector_map/vector_map_20180220_20-increased-detection-area/stopline.csv,/home/autoware/apex-data/apex_ros1/map/vector_map/vector_map_20180220_20-increased-detection-area/vector.csv,/home/autoware/apex-data/apex_ros1/map/vector_map/vector_map_20180220_20-increased-detection-area/wayarea.csv,/home/autoware/apex-data/apex_ros1/map/vector_map/vector_map_20180220_20-increased-detection-area/whiteline.csv
+vehicle_info:
+  info_path: ''
+vehicle_model:
+  model_path: /home/autoware/Autoware/ros/src/.config/model/estima_black.urdf
+vel_pose_connect:
+  budget: 20
+  cpu_chks:
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  nice: 0
+  period: 100
+  policy: !!python/unicode 'FIFO'
+  prio: 99
+  real_time: false
+  sim_mode: false
+  topic_pose_stamped: !!python/unicode '/ndt_pose'
+  topic_twist_stamped: /ssc_current_twist
+velocity_set:
+  deceleration_obstacle: 1.2
+  deceleration_range: 0
+  deceleration_stopline: 0.8
+  detection_height_bottom: -0.5
+  detection_height_top: 1.6
+  detection_range: 1.3
+  enablePlannerDynamicSwitch: false
+  enable_multiple_crosswalk_detection: false
+  points_topic: points_no_ground
+  stop_distance_obstacle: 12.0
+  stop_distance_stopline: 5.0
+  temporal_waypoints_size: 100.0
+  threshold_points: 5
+  use_crosswalk_detection: false
+  velocity_change_limit: 30.0
+virtual_scan_image:
+  camera_id: ''
+  sync: false
+vision_beyond_track:
+  budget: 20
+  camera_height: 1.2
+  camera_info_src: !!python/unicode '/camera0/camera_info'
+  cpu_chks:
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  nice: 0
+  objects_topic_src: !!python/unicode '/detection/vision_objects'
+  period: 100
+  policy: !!python/unicode 'FIFO'
+  prio: 99
+  real_time: true
+vision_darknet_yolo3:
+  camera_id: !!python/unicode ''
+  gpu_device_id: 0
+  image_src: !!python/unicode '/camera0/image_raw'
+  names_file: /home/autoware/Autoware/ros/src/computing/perception/detection/vision_detector/packages/vision_darknet_detect/darknet/cfg/coco.names
+  network_definition_file: /home/autoware/Autoware/ros/src/computing/perception/detection/vision_detector/packages/vision_darknet_detect/darknet/cfg/yolov3.cfg
+  nms_threshold: 0.45
+  pretrained_model_file: /home/autoware/yolov3.weights
+  score_threshold: 0.5
+vision_kf_track:
+  camera_id: !!python/unicode '/camera0'
+  car: true
+  default_lifespan: 8
+  error_estimate_covariance: 1000000.0
+  initial_lifespan: 4
+  measurement_noise_covariance: 25.0
+  noise_covariance: 1.0
+  orb_features: 2000
+  pedestrian: true
+  percentage_of_overlapping: 0.0
+  sync: false
+  use_orb: 0
+vision_klt_track:
+  camera_id: !!python/unicode '/camera0'
+  car: true
+  default_lifespan: 8
+  error_estimate_covariance: 1000000.0
+  initial_lifespan: 4
+  measurement_noise_covariance: 25.0
+  noise_covariance: 1.0
+  orb_features: 2000
+  pedestrian: true
+  percentage_of_overlapping: 0.0
+  sync: false
+  use_orb: 0
+voxel_grid_filter:
+  measurement_range: 200
+  points_topic: !!python/unicode '/points_raw'
+  sync: false
+  voxel_leaf_size: 2.0
+waypoint_loader:
+  accel_limit: 0.98
+  decel_limit: 0.98
+  disable_decision_maker: true
+  end_point_offset: 5
+  multi_lane_csv: /home/autoware/apex-data/apex_ros1/map/waypoints/apex_test3.csv
+  radius_min: 6.0
+  radius_thresh: 20.0
+  replanning_mode: false
+  resample_interval: 1.0
+  resample_mode: true
+  velocity_max: 20.0
+  velocity_min: 4.0
+  velocity_offset: 4
+waypoint_saver:
+  interval: 1.0
+  save_filename: /home/autoware/apex-data/apex_ros1/map/waypoints/apex_test_2-5_0to30to0.csv
+  save_velocity: true
+wf_simulator:
+  accel_rate: 1.0
+  angle_error: 0.0
+  initialize_source: !!python/unicode 'Rviz'
+  position_error: 0.0
